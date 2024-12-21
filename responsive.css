@@ -1,0 +1,96 @@
+header nav .burger{
+    display: none;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+    
+}
+
+/* Tablet Landscape and desktop */
+@media (max-width: 1200px) {
+
+}
+
+/* Portrait tablet */
+@media (max-width: 950px) {
+    header .logo img{
+        width: 100px;
+    }
+    header ul li{
+        margin: 0;
+    }
+}
+
+/* Portrait tablet */
+@media (max-width: 900px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    header nav .burger{
+        all: unset;
+        padding: 10px;
+        height: 24px;
+        aspect-ratio: 1;
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+        position: absolute;
+        right: 20px;
+    }
+    header nav .burger input{
+        appearance: none;
+        position: absolute;
+    }
+    header .logo img{
+        width: 100px;
+    }
+    header ul{
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        right: 0;
+        top: 148px;
+        padding: 1.5rem;
+        height: calc(100vh - 140px);
+        transform: translateX(100%);
+        transition: 0.2s;
+        
+        background: #804545;
+    }
+    header nav:has(.burger input:checked) ul{
+        transform: translateX(0%);
+    }
+    .main-content{
+        display: grid;
+        gap: 1rem;
+    }
+    .main-content .content-item{
+        width: auto;
+    }
+
+
+    .about-section{
+        display: grid;
+        gap: 1rem;
+    }
+    .about-section .about-image{
+        grid-row-start: 1;
+    }
+    .about-section .about-image{
+        width: 100%;
+    }
+    .about-section .about-image img{
+        width: 100%;
+    }
+    .about-section .about-text{
+        width: 100%;
+    }
+    .team-section .container{
+        display: grid;
+    }
+    .team-section .container .team-member{
+        width: auto;
+    }
+}
